@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  mysql:
+    container_name: sowidu-mysql
+    build: ./compose/mysql
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./backups:/backups
+      - ./db-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sowidu
+      MYSQL_USER: sowidu
+      MYSQL_PASSWORD: sowidu
