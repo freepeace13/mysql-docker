@@ -37,4 +37,4 @@ echo "creating new database $MYSQL_DATABASE"
 
 # restore the database
 echo "restoring database $MYSQL_DATABASE"
-/usr/bin/mysqldump -u $MYSQL_USER --password=$MYSQL_PASSWORD $MYSQL_DATABASE < ${BACKUPFILE}
+/usr/bin/mysql -u $MYSQL_USER --password=$MYSQL_PASSWORD $MYSQL_DATABASE < ${BACKUPFILE}
